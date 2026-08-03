@@ -1,0 +1,802 @@
+[
+    {
+        "name": "Premium Headphones",
+        "price": 119.22,
+        "description": "High quality premium headphones designed for everyday use and maximum durability in the electronics category.",
+        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+        "category": "electronics",
+        "createdAt": "2026-05-26T11:17:24.581Z"
+    },
+    {
+        "name": "Ultra Smartwatch",
+        "price": 137.71,
+        "description": "High quality ultra smartwatch designed for everyday use and maximum durability in the electronics category.",
+        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+        "category": "electronics",
+        "createdAt": "2026-07-24T11:17:24.581Z"
+    },
+    {
+        "name": "Classic Bluetooth Speaker",
+        "price": 167.23,
+        "description": "High quality classic bluetooth speaker designed for everyday use and maximum durability in the electronics category.",
+        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+        "category": "electronics",
+        "createdAt": "2026-05-24T11:17:24.581Z"
+    },
+    {
+        "name": "Pro 4K Monitor",
+        "price": 72.66,
+        "description": "High quality pro 4k monitor designed for everyday use and maximum durability in the electronics category.",
+        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+        "category": "electronics",
+        "createdAt": "2026-07-30T11:17:24.581Z"
+    },
+    {
+        "name": "Ergonomic Mechanical Keyboard",
+        "price": 179.66,
+        "description": "High quality ergonomic mechanical keyboard designed for everyday use and maximum durability in the electronics category.",
+        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+        "category": "electronics",
+        "createdAt": "2026-06-04T11:17:24.581Z"
+    },
+    {
+        "name": "Compact Wireless Mouse",
+        "price": 124.4,
+        "description": "High quality compact wireless mouse designed for everyday use and maximum durability in the electronics category.",
+        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+        "category": "electronics",
+        "createdAt": "2026-07-28T11:17:24.581Z"
+    },
+    {
+        "name": "Wireless Power Bank",
+        "price": 63.21,
+        "description": "High quality wireless power bank designed for everyday use and maximum durability in the electronics category.",
+        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+        "category": "electronics",
+        "createdAt": "2026-06-17T11:17:24.581Z"
+    },
+    {
+        "name": "Smart USB-C Hub",
+        "price": 51.7,
+        "description": "High quality smart usb-c hub designed for everyday use and maximum durability in the electronics category.",
+        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+        "category": "electronics",
+        "createdAt": "2026-06-25T11:17:24.581Z"
+    },
+    {
+        "name": "Deluxe Webcam",
+        "price": 80.7,
+        "description": "High quality deluxe webcam designed for everyday use and maximum durability in the electronics category.",
+        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+        "category": "electronics",
+        "createdAt": "2026-06-27T11:17:24.581Z"
+    },
+    {
+        "name": "Portable Tablet Stand",
+        "price": 16.74,
+        "description": "High quality portable tablet stand designed for everyday use and maximum durability in the electronics category.",
+        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+        "category": "electronics",
+        "createdAt": "2026-05-22T11:17:24.581Z"
+    },
+    {
+        "name": "Modern Cotton T-Shirt",
+        "price": 35.48,
+        "description": "High quality modern cotton t-shirt designed for everyday use and maximum durability in the clothing category.",
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500",
+        "category": "clothing",
+        "createdAt": "2026-05-13T11:17:24.581Z"
+    },
+    {
+        "name": "Eco-Friendly Denim Jacket",
+        "price": 68.86,
+        "description": "High quality eco-friendly denim jacket designed for everyday use and maximum durability in the clothing category.",
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500",
+        "category": "clothing",
+        "createdAt": "2026-05-19T11:17:24.581Z"
+    },
+    {
+        "name": "Heavy-Duty Hoodie",
+        "price": 89.56,
+        "description": "High quality heavy-duty hoodie designed for everyday use and maximum durability in the clothing category.",
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500",
+        "category": "clothing",
+        "createdAt": "2026-05-10T11:17:24.581Z"
+    },
+    {
+        "name": "Lightweight Slim-Fit Jeans",
+        "price": 140.61,
+        "description": "High quality lightweight slim-fit jeans designed for everyday use and maximum durability in the clothing category.",
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500",
+        "category": "clothing",
+        "createdAt": "2026-07-11T11:17:24.581Z"
+    },
+    {
+        "name": "HD Casual Blazer",
+        "price": 165.78,
+        "description": "High quality hd casual blazer designed for everyday use and maximum durability in the clothing category.",
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500",
+        "category": "clothing",
+        "createdAt": "2026-07-21T11:17:24.581Z"
+    },
+    {
+        "name": "Sleek Polo Shirt",
+        "price": 113.35,
+        "description": "High quality sleek polo shirt designed for everyday use and maximum durability in the clothing category.",
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500",
+        "category": "clothing",
+        "createdAt": "2026-07-04T11:17:24.582Z"
+    },
+    {
+        "name": "Durable Chino Pants",
+        "price": 53.13,
+        "description": "High quality durable chino pants designed for everyday use and maximum durability in the clothing category.",
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500",
+        "category": "clothing",
+        "createdAt": "2026-05-28T11:17:24.582Z"
+    },
+    {
+        "name": "Advanced Winter Coat",
+        "price": 108.8,
+        "description": "High quality advanced winter coat designed for everyday use and maximum durability in the clothing category.",
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500",
+        "category": "clothing",
+        "createdAt": "2026-05-13T11:17:24.582Z"
+    },
+    {
+        "name": "Minimalist Tracksuit",
+        "price": 92.92,
+        "description": "High quality minimalist tracksuit designed for everyday use and maximum durability in the clothing category.",
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500",
+        "category": "clothing",
+        "createdAt": "2026-06-02T11:17:24.582Z"
+    },
+    {
+        "name": "Vibrant Sweater",
+        "price": 179.2,
+        "description": "High quality vibrant sweater designed for everyday use and maximum durability in the clothing category.",
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500",
+        "category": "clothing",
+        "createdAt": "2026-07-28T11:17:24.582Z"
+    },
+    {
+        "name": "Premium Air Fryer",
+        "price": 176.58,
+        "description": "High quality premium air fryer designed for everyday use and maximum durability in the home & kitchen category.",
+        "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=500",
+        "category": "home & kitchen",
+        "createdAt": "2026-05-15T11:17:24.582Z"
+    },
+    {
+        "name": "Ultra Coffee Maker",
+        "price": 149.05,
+        "description": "High quality ultra coffee maker designed for everyday use and maximum durability in the home & kitchen category.",
+        "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=500",
+        "category": "home & kitchen",
+        "createdAt": "2026-07-08T11:17:24.582Z"
+    },
+    {
+        "name": "Classic Blender",
+        "price": 20.06,
+        "description": "High quality classic blender designed for everyday use and maximum durability in the home & kitchen category.",
+        "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=500",
+        "category": "home & kitchen",
+        "createdAt": "2026-06-30T11:17:24.582Z"
+    },
+    {
+        "name": "Pro Stainless Steel Pan",
+        "price": 111.89,
+        "description": "High quality pro stainless steel pan designed for everyday use and maximum durability in the home & kitchen category.",
+        "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=500",
+        "category": "home & kitchen",
+        "createdAt": "2026-06-03T11:17:24.582Z"
+    },
+    {
+        "name": "Ergonomic Electric Kettle",
+        "price": 194.84,
+        "description": "High quality ergonomic electric kettle designed for everyday use and maximum durability in the home & kitchen category.",
+        "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=500",
+        "category": "home & kitchen",
+        "createdAt": "2026-07-11T11:17:24.582Z"
+    },
+    {
+        "name": "Compact Vacuum Cleaner",
+        "price": 82.37,
+        "description": "High quality compact vacuum cleaner designed for everyday use and maximum durability in the home & kitchen category.",
+        "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=500",
+        "category": "home & kitchen",
+        "createdAt": "2026-06-19T11:17:24.582Z"
+    },
+    {
+        "name": "Wireless Desk Lamp",
+        "price": 187.44,
+        "description": "High quality wireless desk lamp designed for everyday use and maximum durability in the home & kitchen category.",
+        "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=500",
+        "category": "home & kitchen",
+        "createdAt": "2026-05-18T11:17:24.582Z"
+    },
+    {
+        "name": "Smart Memory Foam Pillow",
+        "price": 100.28,
+        "description": "High quality smart memory foam pillow designed for everyday use and maximum durability in the home & kitchen category.",
+        "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=500",
+        "category": "home & kitchen",
+        "createdAt": "2026-07-11T11:17:24.582Z"
+    },
+    {
+        "name": "Deluxe Chef Knife",
+        "price": 81.39,
+        "description": "High quality deluxe chef knife designed for everyday use and maximum durability in the home & kitchen category.",
+        "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=500",
+        "category": "home & kitchen",
+        "createdAt": "2026-06-20T11:17:24.582Z"
+    },
+    {
+        "name": "Portable Food Storage Set",
+        "price": 156.1,
+        "description": "High quality portable food storage set designed for everyday use and maximum durability in the home & kitchen category.",
+        "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=500",
+        "category": "home & kitchen",
+        "createdAt": "2026-07-15T11:17:24.582Z"
+    },
+    {
+        "name": "Modern Sci-Fi Novel",
+        "price": 184.46,
+        "description": "High quality modern sci-fi novel designed for everyday use and maximum durability in the books category.",
+        "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500",
+        "category": "books",
+        "createdAt": "2026-05-21T11:17:24.582Z"
+    },
+    {
+        "name": "Eco-Friendly Coding Masterclass",
+        "price": 77.69,
+        "description": "High quality eco-friendly coding masterclass designed for everyday use and maximum durability in the books category.",
+        "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500",
+        "category": "books",
+        "createdAt": "2026-06-26T11:17:24.582Z"
+    },
+    {
+        "name": "Heavy-Duty Cookbook",
+        "price": 176.24,
+        "description": "High quality heavy-duty cookbook designed for everyday use and maximum durability in the books category.",
+        "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500",
+        "category": "books",
+        "createdAt": "2026-05-29T11:17:24.582Z"
+    },
+    {
+        "name": "Lightweight Financial Freedom",
+        "price": 107.16,
+        "description": "High quality lightweight financial freedom designed for everyday use and maximum durability in the books category.",
+        "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500",
+        "category": "books",
+        "createdAt": "2026-07-15T11:17:24.582Z"
+    },
+    {
+        "name": "HD Mystery Thriller",
+        "price": 68.72,
+        "description": "High quality hd mystery thriller designed for everyday use and maximum durability in the books category.",
+        "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500",
+        "category": "books",
+        "createdAt": "2026-06-28T11:17:24.582Z"
+    },
+    {
+        "name": "Sleek History Handbook",
+        "price": 79.24,
+        "description": "High quality sleek history handbook designed for everyday use and maximum durability in the books category.",
+        "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500",
+        "category": "books",
+        "createdAt": "2026-07-06T11:17:24.582Z"
+    },
+    {
+        "name": "Durable Mindfulness Guide",
+        "price": 59.5,
+        "description": "High quality durable mindfulness guide designed for everyday use and maximum durability in the books category.",
+        "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500",
+        "category": "books",
+        "createdAt": "2026-07-31T11:17:24.582Z"
+    },
+    {
+        "name": "Advanced Design Systems",
+        "price": 103.03,
+        "description": "High quality advanced design systems designed for everyday use and maximum durability in the books category.",
+        "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500",
+        "category": "books",
+        "createdAt": "2026-06-19T11:17:24.582Z"
+    },
+    {
+        "name": "Minimalist Self Improvement",
+        "price": 135.52,
+        "description": "High quality minimalist self improvement designed for everyday use and maximum durability in the books category.",
+        "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500",
+        "category": "books",
+        "createdAt": "2026-06-25T11:17:24.582Z"
+    },
+    {
+        "name": "Vibrant Biography",
+        "price": 127.54,
+        "description": "High quality vibrant biography designed for everyday use and maximum durability in the books category.",
+        "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500",
+        "category": "books",
+        "createdAt": "2026-06-25T11:17:24.582Z"
+    },
+    {
+        "name": "Premium Face Moisturizer",
+        "price": 134.29,
+        "description": "High quality premium face moisturizer designed for everyday use and maximum durability in the beauty category.",
+        "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500",
+        "category": "beauty",
+        "createdAt": "2026-06-28T11:17:24.582Z"
+    },
+    {
+        "name": "Ultra Sunscreen SPF 50",
+        "price": 144.6,
+        "description": "High quality ultra sunscreen spf 50 designed for everyday use and maximum durability in the beauty category.",
+        "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500",
+        "category": "beauty",
+        "createdAt": "2026-06-18T11:17:24.582Z"
+    },
+    {
+        "name": "Classic Vitamin C Serum",
+        "price": 163.85,
+        "description": "High quality classic vitamin c serum designed for everyday use and maximum durability in the beauty category.",
+        "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500",
+        "category": "beauty",
+        "createdAt": "2026-06-27T11:17:24.582Z"
+    },
+    {
+        "name": "Pro Hair Dryer",
+        "price": 26.33,
+        "description": "High quality pro hair dryer designed for everyday use and maximum durability in the beauty category.",
+        "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500",
+        "category": "beauty",
+        "createdAt": "2026-06-25T11:17:24.582Z"
+    },
+    {
+        "name": "Ergonomic Organic Lip Balm",
+        "price": 46.01,
+        "description": "High quality ergonomic organic lip balm designed for everyday use and maximum durability in the beauty category.",
+        "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500",
+        "category": "beauty",
+        "createdAt": "2026-06-23T11:17:24.582Z"
+    },
+    {
+        "name": "Compact Facial Cleanser",
+        "price": 13.24,
+        "description": "High quality compact facial cleanser designed for everyday use and maximum durability in the beauty category.",
+        "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500",
+        "category": "beauty",
+        "createdAt": "2026-05-12T11:17:24.582Z"
+    },
+    {
+        "name": "Wireless Perfume Spray",
+        "price": 91.63,
+        "description": "High quality wireless perfume spray designed for everyday use and maximum durability in the beauty category.",
+        "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500",
+        "category": "beauty",
+        "createdAt": "2026-05-20T11:17:24.582Z"
+    },
+    {
+        "name": "Smart Clay Mask",
+        "price": 87.98,
+        "description": "High quality smart clay mask designed for everyday use and maximum durability in the beauty category.",
+        "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500",
+        "category": "beauty",
+        "createdAt": "2026-05-30T11:17:24.582Z"
+    },
+    {
+        "name": "Deluxe Shampoo Bar",
+        "price": 134.59,
+        "description": "High quality deluxe shampoo bar designed for everyday use and maximum durability in the beauty category.",
+        "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500",
+        "category": "beauty",
+        "createdAt": "2026-06-15T11:17:24.582Z"
+    },
+    {
+        "name": "Portable Beard Trimmer",
+        "price": 124.66,
+        "description": "High quality portable beard trimmer designed for everyday use and maximum durability in the beauty category.",
+        "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500",
+        "category": "beauty",
+        "createdAt": "2026-07-04T11:17:24.582Z"
+    },
+    {
+        "name": "Modern Yoga Mat",
+        "price": 178.89,
+        "description": "High quality modern yoga mat designed for everyday use and maximum durability in the sports category.",
+        "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500",
+        "category": "sports",
+        "createdAt": "2026-06-13T11:17:24.582Z"
+    },
+    {
+        "name": "Eco-Friendly Dumbbell Set",
+        "price": 163.83,
+        "description": "High quality eco-friendly dumbbell set designed for everyday use and maximum durability in the sports category.",
+        "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500",
+        "category": "sports",
+        "createdAt": "2026-05-17T11:17:24.582Z"
+    },
+    {
+        "name": "Heavy-Duty Resistance Bands",
+        "price": 23.1,
+        "description": "High quality heavy-duty resistance bands designed for everyday use and maximum durability in the sports category.",
+        "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500",
+        "category": "sports",
+        "createdAt": "2026-07-03T11:17:24.582Z"
+    },
+    {
+        "name": "Lightweight Basketball",
+        "price": 177.2,
+        "description": "High quality lightweight basketball designed for everyday use and maximum durability in the sports category.",
+        "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500",
+        "category": "sports",
+        "createdAt": "2026-07-13T11:17:24.582Z"
+    },
+    {
+        "name": "HD Tennis Racket",
+        "price": 154.79,
+        "description": "High quality hd tennis racket designed for everyday use and maximum durability in the sports category.",
+        "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500",
+        "category": "sports",
+        "createdAt": "2026-06-18T11:17:24.582Z"
+    },
+    {
+        "name": "Sleek Fitness Tracker",
+        "price": 139.06,
+        "description": "High quality sleek fitness tracker designed for everyday use and maximum durability in the sports category.",
+        "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500",
+        "category": "sports",
+        "createdAt": "2026-07-05T11:17:24.582Z"
+    },
+    {
+        "name": "Durable Hydration Backpack",
+        "price": 193.32,
+        "description": "High quality durable hydration backpack designed for everyday use and maximum durability in the sports category.",
+        "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500",
+        "category": "sports",
+        "createdAt": "2026-07-16T11:17:24.582Z"
+    },
+    {
+        "name": "Advanced Jump Rope",
+        "price": 106.07,
+        "description": "High quality advanced jump rope designed for everyday use and maximum durability in the sports category.",
+        "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500",
+        "category": "sports",
+        "createdAt": "2026-06-17T11:17:24.582Z"
+    },
+    {
+        "name": "Minimalist Foam Roller",
+        "price": 163.86,
+        "description": "High quality minimalist foam roller designed for everyday use and maximum durability in the sports category.",
+        "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500",
+        "category": "sports",
+        "createdAt": "2026-05-30T11:17:24.582Z"
+    },
+    {
+        "name": "Vibrant Gym Bag",
+        "price": 46.67,
+        "description": "High quality vibrant gym bag designed for everyday use and maximum durability in the sports category.",
+        "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500",
+        "category": "sports",
+        "createdAt": "2026-06-21T11:17:24.582Z"
+    },
+    {
+        "name": "Premium Running Shoes",
+        "price": 77.83,
+        "description": "High quality premium running shoes designed for everyday use and maximum durability in the footwear category.",
+        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500",
+        "category": "footwear",
+        "createdAt": "2026-07-27T11:17:24.582Z"
+    },
+    {
+        "name": "Ultra Leather Loafers",
+        "price": 178.22,
+        "description": "High quality ultra leather loafers designed for everyday use and maximum durability in the footwear category.",
+        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500",
+        "category": "footwear",
+        "createdAt": "2026-08-03T11:17:24.582Z"
+    },
+    {
+        "name": "Classic Canvas Sneakers",
+        "price": 64.7,
+        "description": "High quality classic canvas sneakers designed for everyday use and maximum durability in the footwear category.",
+        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500",
+        "category": "footwear",
+        "createdAt": "2026-07-06T11:17:24.582Z"
+    },
+    {
+        "name": "Pro Hiking Boots",
+        "price": 154.75,
+        "description": "High quality pro hiking boots designed for everyday use and maximum durability in the footwear category.",
+        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500",
+        "category": "footwear",
+        "createdAt": "2026-07-19T11:17:24.582Z"
+    },
+    {
+        "name": "Ergonomic Casual Sandals",
+        "price": 97.94,
+        "description": "High quality ergonomic casual sandals designed for everyday use and maximum durability in the footwear category.",
+        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500",
+        "category": "footwear",
+        "createdAt": "2026-07-26T11:17:24.582Z"
+    },
+    {
+        "name": "Compact Slip-On Shoes",
+        "price": 57.83,
+        "description": "High quality compact slip-on shoes designed for everyday use and maximum durability in the footwear category.",
+        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500",
+        "category": "footwear",
+        "createdAt": "2026-06-06T11:17:24.582Z"
+    },
+    {
+        "name": "Wireless Training Trainers",
+        "price": 15.61,
+        "description": "High quality wireless training trainers designed for everyday use and maximum durability in the footwear category.",
+        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500",
+        "category": "footwear",
+        "createdAt": "2026-05-12T11:17:24.582Z"
+    },
+    {
+        "name": "Smart Formal Oxfords",
+        "price": 49.85,
+        "description": "High quality smart formal oxfords designed for everyday use and maximum durability in the footwear category.",
+        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500",
+        "category": "footwear",
+        "createdAt": "2026-06-07T11:17:24.582Z"
+    },
+    {
+        "name": "Deluxe Flip Flops",
+        "price": 149.85,
+        "description": "High quality deluxe flip flops designed for everyday use and maximum durability in the footwear category.",
+        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500",
+        "category": "footwear",
+        "createdAt": "2026-07-09T11:17:24.582Z"
+    },
+    {
+        "name": "Portable High-Top Sneakers",
+        "price": 89.76,
+        "description": "High quality portable high-top sneakers designed for everyday use and maximum durability in the footwear category.",
+        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500",
+        "category": "footwear",
+        "createdAt": "2026-06-06T11:17:24.582Z"
+    },
+    {
+        "name": "Modern Leather Wallet",
+        "price": 138.89,
+        "description": "High quality modern leather wallet designed for everyday use and maximum durability in the accessories category.",
+        "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=500",
+        "category": "accessories",
+        "createdAt": "2026-06-15T11:17:24.582Z"
+    },
+    {
+        "name": "Eco-Friendly Polarized Sunglasses",
+        "price": 146.61,
+        "description": "High quality eco-friendly polarized sunglasses designed for everyday use and maximum durability in the accessories category.",
+        "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=500",
+        "category": "accessories",
+        "createdAt": "2026-05-06T11:17:24.582Z"
+    },
+    {
+        "name": "Heavy-Duty Travel Backpack",
+        "price": 184.64,
+        "description": "High quality heavy-duty travel backpack designed for everyday use and maximum durability in the accessories category.",
+        "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=500",
+        "category": "accessories",
+        "createdAt": "2026-07-21T11:17:24.582Z"
+    },
+    {
+        "name": "Lightweight Canvas Tote",
+        "price": 32.28,
+        "description": "High quality lightweight canvas tote designed for everyday use and maximum durability in the accessories category.",
+        "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=500",
+        "category": "accessories",
+        "createdAt": "2026-06-11T11:17:24.582Z"
+    },
+    {
+        "name": "HD Metal Watch",
+        "price": 114.81,
+        "description": "High quality hd metal watch designed for everyday use and maximum durability in the accessories category.",
+        "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=500",
+        "category": "accessories",
+        "createdAt": "2026-07-15T11:17:24.582Z"
+    },
+    {
+        "name": "Sleek Beanie Hat",
+        "price": 177.66,
+        "description": "High quality sleek beanie hat designed for everyday use and maximum durability in the accessories category.",
+        "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=500",
+        "category": "accessories",
+        "createdAt": "2026-05-15T11:17:24.582Z"
+    },
+    {
+        "name": "Durable Leather Belt",
+        "price": 106.05,
+        "description": "High quality durable leather belt designed for everyday use and maximum durability in the accessories category.",
+        "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=500",
+        "category": "accessories",
+        "createdAt": "2026-07-09T11:17:24.582Z"
+    },
+    {
+        "name": "Advanced Laptop Sleeve",
+        "price": 199.71,
+        "description": "High quality advanced laptop sleeve designed for everyday use and maximum durability in the accessories category.",
+        "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=500",
+        "category": "accessories",
+        "createdAt": "2026-06-29T11:17:24.582Z"
+    },
+    {
+        "name": "Minimalist Key Organizer",
+        "price": 124.36,
+        "description": "High quality minimalist key organizer designed for everyday use and maximum durability in the accessories category.",
+        "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=500",
+        "category": "accessories",
+        "createdAt": "2026-06-17T11:17:24.582Z"
+    },
+    {
+        "name": "Vibrant Travel Umbrella",
+        "price": 190.47,
+        "description": "High quality vibrant travel umbrella designed for everyday use and maximum durability in the accessories category.",
+        "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=500",
+        "category": "accessories",
+        "createdAt": "2026-07-21T11:17:24.582Z"
+    },
+    {
+        "name": "Premium Building Block Set",
+        "price": 80.7,
+        "description": "High quality premium building block set designed for everyday use and maximum durability in the toys category.",
+        "image": "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=500",
+        "category": "toys",
+        "createdAt": "2026-06-12T11:17:24.582Z"
+    },
+    {
+        "name": "Ultra Remote Control Car",
+        "price": 74.28,
+        "description": "High quality ultra remote control car designed for everyday use and maximum durability in the toys category.",
+        "image": "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=500",
+        "category": "toys",
+        "createdAt": "2026-07-07T11:17:24.582Z"
+    },
+    {
+        "name": "Classic Board Game",
+        "price": 21.07,
+        "description": "High quality classic board game designed for everyday use and maximum durability in the toys category.",
+        "image": "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=500",
+        "category": "toys",
+        "createdAt": "2026-06-20T11:17:24.582Z"
+    },
+    {
+        "name": "Pro Puzzle 1000 Pcs",
+        "price": 70,
+        "description": "High quality pro puzzle 1000 pcs designed for everyday use and maximum durability in the toys category.",
+        "image": "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=500",
+        "category": "toys",
+        "createdAt": "2026-07-08T11:17:24.582Z"
+    },
+    {
+        "name": "Ergonomic Action Figure",
+        "price": 69.75,
+        "description": "High quality ergonomic action figure designed for everyday use and maximum durability in the toys category.",
+        "image": "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=500",
+        "category": "toys",
+        "createdAt": "2026-07-31T11:17:24.582Z"
+    },
+    {
+        "name": "Compact Plush Teddy Bear",
+        "price": 138.82,
+        "description": "High quality compact plush teddy bear designed for everyday use and maximum durability in the toys category.",
+        "image": "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=500",
+        "category": "toys",
+        "createdAt": "2026-06-11T11:17:24.582Z"
+    },
+    {
+        "name": "Wireless Drone Mini",
+        "price": 53.35,
+        "description": "High quality wireless drone mini designed for everyday use and maximum durability in the toys category.",
+        "image": "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=500",
+        "category": "toys",
+        "createdAt": "2026-06-14T11:17:24.582Z"
+    },
+    {
+        "name": "Smart Drawing Tablet",
+        "price": 71.86,
+        "description": "High quality smart drawing tablet designed for everyday use and maximum durability in the toys category.",
+        "image": "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=500",
+        "category": "toys",
+        "createdAt": "2026-07-14T11:17:24.582Z"
+    },
+    {
+        "name": "Deluxe Wooden Train Set",
+        "price": 50.08,
+        "description": "High quality deluxe wooden train set designed for everyday use and maximum durability in the toys category.",
+        "image": "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=500",
+        "category": "toys",
+        "createdAt": "2026-07-09T11:17:24.582Z"
+    },
+    {
+        "name": "Portable Card Game",
+        "price": 51.76,
+        "description": "High quality portable card game designed for everyday use and maximum durability in the toys category.",
+        "image": "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=500",
+        "category": "toys",
+        "createdAt": "2026-06-06T11:17:24.582Z"
+    },
+    {
+        "name": "Modern Car Phone Mount",
+        "price": 112.21,
+        "description": "High quality modern car phone mount designed for everyday use and maximum durability in the automotive category.",
+        "image": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=500",
+        "category": "automotive",
+        "createdAt": "2026-07-24T11:17:24.582Z"
+    },
+    {
+        "name": "Eco-Friendly Dashboard Camera",
+        "price": 127.56,
+        "description": "High quality eco-friendly dashboard camera designed for everyday use and maximum durability in the automotive category.",
+        "image": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=500",
+        "category": "automotive",
+        "createdAt": "2026-07-31T11:17:24.582Z"
+    },
+    {
+        "name": "Heavy-Duty Tire Inflator",
+        "price": 186.8,
+        "description": "High quality heavy-duty tire inflator designed for everyday use and maximum durability in the automotive category.",
+        "image": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=500",
+        "category": "automotive",
+        "createdAt": "2026-07-26T11:17:24.582Z"
+    },
+    {
+        "name": "Lightweight Microfiber Towel Set",
+        "price": 157.29,
+        "description": "High quality lightweight microfiber towel set designed for everyday use and maximum durability in the automotive category.",
+        "image": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=500",
+        "category": "automotive",
+        "createdAt": "2026-07-24T11:17:24.582Z"
+    },
+    {
+        "name": "HD Seat Covers",
+        "price": 44.9,
+        "description": "High quality hd seat covers designed for everyday use and maximum durability in the automotive category.",
+        "image": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=500",
+        "category": "automotive",
+        "createdAt": "2026-07-17T11:17:24.582Z"
+    },
+    {
+        "name": "Sleek Car Vacuum",
+        "price": 191.27,
+        "description": "High quality sleek car vacuum designed for everyday use and maximum durability in the automotive category.",
+        "image": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=500",
+        "category": "automotive",
+        "createdAt": "2026-06-18T11:17:24.582Z"
+    },
+    {
+        "name": "Durable Jump Starter",
+        "price": 199.02,
+        "description": "High quality durable jump starter designed for everyday use and maximum durability in the automotive category.",
+        "image": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=500",
+        "category": "automotive",
+        "createdAt": "2026-06-07T11:17:24.582Z"
+    },
+    {
+        "name": "Advanced Trunk Organizer",
+        "price": 138.58,
+        "description": "High quality advanced trunk organizer designed for everyday use and maximum durability in the automotive category.",
+        "image": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=500",
+        "category": "automotive",
+        "createdAt": "2026-06-30T11:17:24.582Z"
+    },
+    {
+        "name": "Minimalist Car Wash Soap",
+        "price": 191.97,
+        "description": "High quality minimalist car wash soap designed for everyday use and maximum durability in the automotive category.",
+        "image": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=500",
+        "category": "automotive",
+        "createdAt": "2026-06-21T11:17:24.582Z"
+    },
+    {
+        "name": "Vibrant Windshield Shade",
+        "price": 102.53,
+        "description": "High quality vibrant windshield shade designed for everyday use and maximum durability in the automotive category.",
+        "image": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=500",
+        "category": "automotive",
+        "createdAt": "2026-07-24T11:17:24.582Z"
+    }
+]
