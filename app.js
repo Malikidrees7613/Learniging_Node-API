@@ -1,4 +1,5 @@
 // http://localhost:3000/
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const product_route = require("./routes/route_product");
