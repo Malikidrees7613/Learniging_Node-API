@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sign In - AuthPro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#c7c4d8",
+                        "error-container": "#ffdad6",
+                        "surface": "#f7f9fb",
+                        "on-secondary-fixed": "#131b2e",
+                        "on-primary-fixed": "#0f0069",
+                        "on-background": "#191c1e",
+                        "on-surface-variant": "#464555",
+                        "outline": "#777587",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#5c647a",
+                        "tertiary-container": "#516177",
+                        "tertiary": "#3a495f",
+                        "on-tertiary-container": "#ccdcf7",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "secondary": "#565e74",
+                        "on-surface": "#191c1e",
+                        "surface-container": "#eceef0",
+                        "primary-container": "#4f46e5",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "primary": "#3525cd",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "surface-variant": "#e0e3e5",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "inverse-surface": "#2d3133",
+                        "background": "#f7f9fb",
+                        "surface-tint": "#4d44e3",
+                        "surface-bright": "#f7f9fb",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#e2dfff",
+                        "surface-container-high": "#e6e8ea",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e0e3e5",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "surface-container-low": "#f2f4f6",
+                        "inverse-primary": "#c3c0ff",
+                        "secondary-fixed": "#dae2fd",
+                        "surface-dim": "#d8dadc",
+                        "on-primary-container": "#dad7ff",
+                        "tertiary-fixed": "#d3e4fe",
+                        "secondary-container": "#dae2fd",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "xl": "64px",
+                        "margin-mobile": "20px",
+                        "sm": "16px",
+                        "margin-desktop": "80px",
+                        "gutter": "24px",
+                        "xs": "8px",
+                        "lg": "40px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "label-xs": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg-mobile": ["Manrope"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Manrope"],
+                        "display-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "label-xs": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col md:flex-row antialiased">
+<!-- Left Side: Form Container -->
+<div class="flex-1 flex flex-col justify-center px-margin-mobile md:px-margin-desktop py-xl md:py-0 w-full max-w-[600px] mx-auto md:mx-0 bg-surface-container-lowest relative z-10 shadow-[20px_0_40px_-10px_rgba(0,0,0,0.05)]">
+<!-- Brand/Logo (Simplified TopNavBar for Sign In context) -->
+<div class="absolute top-0 left-0 w-full p-margin-mobile md:p-margin-desktop flex items-center justify-start">
+<span class="font-headline-md text-headline-md font-bold text-primary flex items-center gap-xs">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">security</span>
+                AuthPro
+            </span>
+</div>
+<div class="w-full max-w-[400px] mx-auto pt-xl md:pt-0">
+<!-- Header -->
+<div class="mb-lg">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-xs">Welcome back</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Please enter your details to sign in.</p>
+</div>
+<!-- Form -->
+<form class="space-y-md">
+<!-- Email -->
+<div>
+<label class="block font-label-xs text-label-xs text-on-surface-variant uppercase mb-xs" for="email">Email</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 flex items-center pl-sm text-outline">
+<span class="material-symbols-outlined">mail</span>
+</span>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-DEFAULT py-sm pl-[44px] pr-sm font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="email" name="email" placeholder="name@company.com" required="" type="email"/>
+</div>
+</div>
+<!-- Password -->
+<div>
+<label class="block font-label-xs text-label-xs text-on-surface-variant uppercase mb-xs" for="password">Password</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 flex items-center pl-sm text-outline">
+<span class="material-symbols-outlined">lock</span>
+</span>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-DEFAULT py-sm pl-[44px] pr-sm font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+</div>
+</div>
+<!-- Remember & Forgot -->
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<input class="h-4 w-4 rounded-DEFAULT border-outline-variant text-primary focus:ring-primary bg-surface-container-lowest" id="remember-me" name="remember-me" type="checkbox"/>
+<label class="ml-xs block font-label-sm text-label-sm text-on-surface-variant" for="remember-me">
+                            Remember me
+                        </label>
+</div>
+<div class="text-sm">
+<a class="font-label-sm text-label-sm font-semibold text-primary hover:text-primary-container transition-colors" href="#">Forgot password?</a>
+</div>
+</div>
+<!-- Sign In Button -->
+<button class="w-full flex justify-center items-center py-sm px-md border border-transparent rounded-DEFAULT shadow-sm font-label-sm text-label-sm text-on-primary bg-primary hover:bg-primary-container focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors" type="submit">
+                    Sign In
+                    <span class="material-symbols-outlined ml-xs text-[18px]">arrow_forward</span>
+</button>
+</form>
+<!-- Divider -->
+<div class="mt-lg mb-md relative">
+<div aria-hidden="true" class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-outline-variant"></div>
+</div>
+<div class="relative flex justify-center">
+<span class="px-sm bg-surface-container-lowest font-label-xs text-label-xs text-on-surface-variant uppercase">Or continue with</span>
+</div>
+</div>
+<!-- Social Logins -->
+<div class="grid grid-cols-2 gap-sm">
+<button class="flex items-center justify-center w-full bg-surface-container-low hover:bg-surface-variant text-on-surface font-label-sm text-label-sm py-xs px-sm rounded-DEFAULT border border-outline-variant transition-colors">
+<img alt="Google" class="h-5 w-5 mr-xs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmswNRdBK1tfCQOquPtag6F3DCBcRajG2nZ86FtUBj_AIJEx8CZ30e7ds8T1n4niQB1mLrTQUEun2JnJBxocJHAXS3aTdoa6TIevzZF0bH94Rdo6ZkvqHitx_j6YHY-5pFxQT6BofQSx5e4uHfWJPohuODkR1BV1oW3Ch6TaBRl3s7nOB_2EU7izC6tpFt63tulYF7bO2LAxYel_D7x5CRx13R-MwYQOyVRVlrGnJW5-QUdKfGkijj"/>
+                    Google
+                </button>
+<button class="flex items-center justify-center w-full bg-surface-container-low hover:bg-surface-variant text-on-surface font-label-sm text-label-sm py-xs px-sm rounded-DEFAULT border border-outline-variant transition-colors">
+<img alt="GitHub" class="h-5 w-5 mr-xs grayscale opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC-NVxTN4LD0VGEkKm5q-ImF487UHdS2DjPugBF8aooWPXCVV9Taaox0SOi8Wrgtwu1TANQB_EXmtQpa49xC6NsxAsilTn-vBfxWnzT_1RHoJyoGk4a6s12BrjNEI8_16sAmj-MtC7bfU28l_TocQxQ-cHX8THxc2NGvQ_dP2eWYkIM6b-_EgVg79rOfyd95tHx0vc1GWA-b-kA3HALoxD6evF3WfE_IXHM88MdYhN3lAZJJDwZ_PS"/>
+                    GitHub
+                </button>
+</div>
+<p class="mt-lg text-center font-body-md text-body-md text-on-surface-variant">
+                Don't have an account? <a class="font-label-sm text-label-sm font-semibold text-primary hover:text-primary-container transition-colors" href="signup.html">Get Started</a>
+</p>
+</div>
+</div>
+<!-- Right Side: Image/Brand Area (Hidden on Mobile) -->
+<div class="hidden md:flex flex-1 relative bg-surface-container-high overflow-hidden items-center justify-center">
+<!-- Background Image -->
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A sophisticated, abstract 3D architectural rendering featuring clean lines, smooth geometric shapes, and a minimalist corporate aesthetic. The lighting is soft and diffused, casting subtle ambient shadows on pristine white and subtle indigo surfaces. The mood is calm, professional, and secure, perfectly complementing a high-end enterprise software application." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAlIQ_WTLD6lBbLcCkE7e2YqUeL-7J7ft4tffccZeUacuqA_CyQpV7isU-E5G32RyK13216R5BotdUuc29Ub9H62-MqOXiS3LWl5Dgx2QVxIiyo2wa1lQynQGwYBXGOvHD3colwDBD6p5Nr07UO_Bp7uleFi2DETPJFJXH23VfNbwtBYc7WStE4BxgOF11_4eHhqWVurYmzTIrBeJOjpy4wXHbFqWwL_VJnSw5pU0lOh7tHOrMRfGQK')"></div>
+<!-- Overlay for readability -->
+<div class="absolute inset-0 bg-gradient-to-t from-on-tertiary-fixed/80 to-on-tertiary-fixed/10"></div>
+<!-- Content Overlay -->
+<div class="relative z-10 max-w-lg p-margin-desktop text-on-primary">
+<div class="mb-lg opacity-80">
+<span class="material-symbols-outlined text-[48px]" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+</div>
+<h2 class="font-display-lg text-display-lg text-on-primary mb-md leading-tight">
+                "AuthPro transformed our security infrastructure overnight. The integration was seamless, and the professional minimalism aligns perfectly with our enterprise standards."
+            </h2>
+<div class="flex items-center mt-lg">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest/20 backdrop-blur-sm flex items-center justify-center mr-sm border border-on-primary/30">
+<span class="material-symbols-outlined text-on-primary">person</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm font-bold text-on-primary">Sarah Jenkins</p>
+<p class="font-body-md text-body-md text-primary-fixed-dim">CTO, TechNova Enterprise</p>
+</div>
+</div>
+</div>
+</div>
+</body></html>

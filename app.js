@@ -4,13 +4,18 @@ const express = require("express");
 const app = express();
 const product_route = require("./routes/route_product");
 const connect_db = require("./db/connect");
+const auth_route = require("./routes/route_auth");
 const port = 3000;
 
 app.get("/", (req, res) => {
     // res.send(200);
     res.send("Server is up and running!");
 })
+app.use(express.json());
 app.use("/api/products", product_route);
+app.use("/api/auth", auth_route);
+app.use(express.static('public'));
+
 
 const start = async () => {
     try {
@@ -25,4 +30,3 @@ const start = async () => {
 }
 
 start();
-
