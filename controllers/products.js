@@ -1,7 +1,7 @@
 const Product = require("../models/schema_products");
 
 const getAllProducts = async (req, res) => {
-    const { category, name, price, sort } = req.query;
+    const { category, name, price, sort, select } = req.query;
     const queryObject = {};
     if (category) {
         queryObject.category = category;
@@ -15,10 +15,15 @@ const getAllProducts = async (req, res) => {
     let apiData = Product.find(queryObject);
 
     if (sort) {
-        let sortFix = sort.replace(",", " ");
+        let sortFix = sort.split(",").join(" ");
         apiData = apiData.sort(sortFix);
     }
-    console.log(queryObject);
+
+    if (select) {
+        let selectFix = select.split(",").join(" ");
+        apiData = apiData.select(selectFix);
+    }
+    console.log("filters are runing");
     const product_data = await apiData;
     res.status(200).json({ product_data });
 }
