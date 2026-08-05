@@ -2,6 +2,7 @@ const User = require("../models/userSchema");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const { genrateOTP, sendOTPEmail } = require("../services/EmailService");
+const OTP = require("../models/otpVerification");
 
 const register = async (req, res) => {
     try {
@@ -12,10 +13,10 @@ const register = async (req, res) => {
         await user.save();
         const otp = genrateOTP();
         const expiresAt = new Date(Date.now() + 5 * 60 * 1000)
-        await otp.findOneAndUpdate(
+        await OTP.findOneAndUpdate(
             { email },
             { otp, expiresAt, attempt: 0, isVerified: false },
-            { upsert: true, new: true }
+            { upsert: true, returnDocument: 'after' }
         )
         await sendOTPEmail(email, otp);
         res.status(201).json({ message: "User created successfully and otp has ben sent to an email" });
@@ -47,7 +48,7 @@ const verifyOTP = async (req, res) => {
             res.status(400).json({ message: "Maximum OTP attempts reached" });
             return;
         }
-        const user = await User.findOneAndUpdate({ email }, { isVerified: true }, { new: true });
+        const user = await User.findOneAndUpdate({ email }, { isVerified: true }, { returnDocument: 'after' });
         res.status(200).json({ message: "User verified successfully", user });
     } catch (error) {
         console.log(error);
@@ -69,10 +70,10 @@ const resendOTP = async (req, res) => {
         }
         const otp = genrateOTP();
         const expiresAt = new Date(Date.now() + 5 * 60 * 1000)
-        await otp.findOneAndUpdate(
+        await OTP.findOneAndUpdate(
             { email },
             { otp, expiresAt, attempt: 0, isVerified: false },
-            { upsert: true, new: true }
+            { upsert: true, returnDocument: 'after' }
         )
         await sendOTPEmail(email, otp);
         res.status(200).json({ message: "OTP resent successfully" });
