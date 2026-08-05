@@ -16,4 +16,4 @@ app.use("/api/products", product_route);
 app.use("/api/auth", auth_route);
 app.use(express.static('public'));
 
-
+module.exports = app;

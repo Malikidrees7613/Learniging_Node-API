@@ -11,7 +11,8 @@ const register = async (req, res) => {
         await user.save();
         res.status(201).json({ message: "User created successfully" });
     } catch (error) {
-        console.log(error)
+        console.log(error);
+        res.status(500).json({ message: "Internal server error" });
     }
 }
 
@@ -20,12 +21,12 @@ const login = async (req, res) => {
         const { username, email, password } = req.body;
         const user = await User.findOne({ email });
         if (!user) {
-            res.status(404).json({ message: "User not found" });
+            res.status(401).json({ message: "Invalid credentials" });
             return;
         }
         const isPasswordValid = await bcrypt.compare(password, user.password);
         if (!isPasswordValid) {
-            res.status(401).json({ message: "Invalid password" });
+            res.status(401).json({ message: "Invalid credentials" });
             return;
         }
         const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: "1h" });
