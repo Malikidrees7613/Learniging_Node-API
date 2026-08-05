@@ -264,8 +264,9 @@
                 const data = await response.json();
                 
                 if (response.ok) {
-                    alert('Account created successfully! Please login.');
-                    window.location.href = '/signIn.html';
+                    // Save email so verifyOtp.html knows which email to verify
+                    localStorage.setItem('pendingVerificationEmail', formData.email);
+                    window.location.href = '/verifyOtp.html';
                 } else {
                     alert(data.message || 'Registration failed');
                 }

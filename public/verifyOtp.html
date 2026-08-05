@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Verify OTP - AuthPro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "outline-variant": "#c7c4d8",
+                    "error-container": "#ffdad6",
+                    "surface": "#f7f9fb",
+                    "on-secondary-fixed": "#131b2e",
+                    "on-primary-fixed": "#0f0069",
+                    "on-background": "#191c1e",
+                    "on-surface-variant": "#464555",
+                    "outline": "#777587",
+                    "error": "#ba1a1a",
+                    "on-error-container": "#93000a",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-container": "#5c647a",
+                    "tertiary-container": "#516177",
+                    "tertiary": "#3a495f",
+                    "on-tertiary-container": "#ccdcf7",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "secondary": "#565e74",
+                    "on-surface": "#191c1e",
+                    "surface-container": "#eceef0",
+                    "primary-container": "#4f46e5",
+                    "on-tertiary-fixed-variant": "#38485d",
+                    "primary": "#3525cd",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "on-tertiary-fixed": "#0b1c30",
+                    "surface-variant": "#e0e3e5",
+                    "primary-fixed-dim": "#c3c0ff",
+                    "inverse-surface": "#2d3133",
+                    "background": "#f7f9fb",
+                    "surface-tint": "#4d44e3",
+                    "surface-bright": "#f7f9fb",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#e2dfff",
+                    "surface-container-high": "#e6e8ea",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e0e3e5",
+                    "tertiary-fixed-dim": "#b7c8e1",
+                    "surface-container-low": "#f2f4f6",
+                    "inverse-primary": "#c3c0ff",
+                    "secondary-fixed": "#dae2fd",
+                    "surface-dim": "#d8dadc",
+                    "on-primary-container": "#dad7ff",
+                    "tertiary-fixed": "#d3e4fe",
+                    "secondary-container": "#dae2fd",
+                    "on-primary-fixed-variant": "#3323cc",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-primary": "#ffffff"
+                },
+                "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+                },
+                "spacing": {
+                    "base": "4px",
+                    "xl": "64px",
+                    "margin-mobile": "20px",
+                    "sm": "16px",
+                    "margin-desktop": "80px",
+                    "gutter": "24px",
+                    "xs": "8px",
+                    "lg": "40px",
+                    "md": "24px"
+                },
+                "fontFamily": {
+                    "label-xs": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-lg-mobile": ["Manrope"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-md": ["Manrope"],
+                    "display-lg": ["Manrope"]
+                },
+                "fontSize": {
+                    "label-xs": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                    "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                    "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                    "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                    "label-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                    "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                    "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                }
+            }
+        }
+    }
+</script>
+<style>
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    /* ── OTP input boxes ── */
+    .otp-input {
+        width: 56px;
+        height: 64px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        font-family: 'Inter', sans-serif;
+        border: 2px solid #c7c4d8;
+        border-radius: 0.5rem;
+        background: #ffffff;
+        color: #191c1e;
+        transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+        outline: none;
+        caret-color: transparent;
+    }
+    .otp-input:focus {
+        border-color: #3525cd;
+        box-shadow: 0 0 0 3px rgba(53, 37, 205, 0.12);
+        transform: translateY(-2px);
+    }
+    .otp-input.filled {
+        border-color: #3525cd;
+        background: #f0efff;
+    }
+    .otp-input.error {
+        border-color: #ba1a1a;
+        background: #ffdad6;
+        animation: shake 0.4s ease;
+    }
+    .otp-input.success {
+        border-color: #1a7a1a;
+        background: #d4f5d4;
+    }
+
+    @keyframes shake {
+        0%, 100% { transform: translateX(0); }
+        20%       { transform: translateX(-6px); }
+        40%       { transform: translateX(6px); }
+        60%       { transform: translateX(-4px); }
+        80%       { transform: translateX(4px); }
+    }
+
+    /* ── Timer ring ── */
+    .timer-ring-circle {
+        transition: stroke-dashoffset 1s linear;
+        transform: rotate(-90deg);
+        transform-origin: 50% 50%;
+    }
+
+    /* ── Toast ── */
+    .toast {
+        transform: translateY(20px);
+        opacity: 0;
+        transition: all 0.3s ease;
+        pointer-events: none;
+    }
+    .toast.show {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* ── Email icon pulse ── */
+    @keyframes pulse-ring {
+        0%   { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(53,37,205,0.4); }
+        70%  { transform: scale(1);    box-shadow: 0 0 0 12px rgba(53,37,205,0); }
+        100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(53,37,205,0); }
+    }
+    .pulse-animation { animation: pulse-ring 2s infinite; }
+
+    /* ── Spinner ── */
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .spinner { animation: spin 0.8s linear infinite; }
+</style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex items-center justify-center p-4 md:p-0">
+
+<!-- ── Toast Notification ── -->
+<div id="toast" class="toast fixed top-6 right-6 z-50 flex items-center gap-3 px-md py-sm rounded-xl shadow-xl border max-w-sm">
+    <span id="toastIcon" class="material-symbols-outlined text-xl"></span>
+    <p id="toastMsg" class="font-label-sm text-label-sm"></p>
+</div>
+
+<main class="w-full max-w-[1440px] mx-auto min-h-screen flex flex-col md:flex-row bg-surface-container-lowest overflow-hidden shadow-[0_10px_15px_-3px_rgba(0,0,0,0.05)]">
+
+    <!-- ── Left Column: OTP Form ── -->
+    <section class="w-full md:w-1/2 lg:w-[45%] flex flex-col justify-center px-margin-mobile py-lg md:px-lg lg:px-[120px] relative z-10 bg-surface-container-lowest">
+        <div class="max-w-md w-full mx-auto">
+
+            <!-- Brand -->
+            <header class="mb-lg">
+                <div class="flex items-center gap-2 mb-md">
+                    <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">security</span>
+                    <span class="font-headline-md text-headline-md text-on-surface">AuthPro</span>
+                </div>
+
+                <!-- Animated email icon -->
+                <div class="flex items-center justify-center w-16 h-16 rounded-full bg-primary-fixed mb-md pulse-animation">
+                    <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">mark_email_read</span>
+                </div>
+
+                <h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface mb-xs tracking-tight">
+                    Check your email
+                </h1>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                    We sent a <strong class="text-on-surface">4-digit code</strong> to
+                </p>
+                <span id="emailDisplay" class="font-label-sm text-label-sm text-primary mt-1 block"></span>
+            </header>
+
+            <!-- OTP Inputs -->
+            <div class="mb-lg">
+                <label class="block font-label-xs text-label-xs text-on-surface uppercase tracking-wider mb-md">
+                    Enter verification code
+                </label>
+                <div id="otpContainer" class="flex gap-3 justify-start">
+                    <input class="otp-input" id="otp1" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code"/>
+                    <input class="otp-input" id="otp2" type="text" inputmode="numeric" maxlength="1" autocomplete="off"/>
+                    <input class="otp-input" id="otp3" type="text" inputmode="numeric" maxlength="1" autocomplete="off"/>
+                    <input class="otp-input" id="otp4" type="text" inputmode="numeric" maxlength="1" autocomplete="off"/>
+                </div>
+
+                <!-- Inline error -->
+                <div id="errorMsg" class="hidden mt-xs flex items-center gap-1">
+                    <span class="material-symbols-outlined text-error text-base">error</span>
+                    <span id="errorText" class="font-label-xs text-label-xs text-error"></span>
+                </div>
+            </div>
+
+            <!-- Timer + Resend Row -->
+            <div class="flex items-center justify-between mb-lg">
+                <div class="flex items-center gap-2">
+                    <!-- SVG countdown ring -->
+                    <svg width="36" height="36" viewBox="0 0 36 36">
+                        <circle cx="18" cy="18" r="14" fill="none" stroke="#e0e3e5" stroke-width="3"/>
+                        <circle id="timerRing" class="timer-ring-circle" cx="18" cy="18" r="14"
+                            fill="none" stroke="#3525cd" stroke-width="3"
+                            stroke-dasharray="87.96" stroke-dashoffset="0"
+                            stroke-linecap="round"/>
+                        <text x="18" y="22" text-anchor="middle" font-size="10" font-weight="700" fill="#3525cd" font-family="Inter">
+                            <tspan id="timerText">05:00</tspan>
+                        </text>
+                    </svg>
+                    <p class="font-label-sm text-label-sm text-on-surface-variant">Code expires in</p>
+                </div>
+
+                <button id="resendBtn"
+                    class="font-label-sm text-label-sm text-outline cursor-not-allowed transition-colors"
+                    disabled>
+                    Resend code
+                </button>
+            </div>
+
+            <!-- Verify Button -->
+            <button id="verifyBtn"
+                onclick="handleVerify()"
+                class="w-full flex justify-center items-center gap-2 py-3 px-4 border border-transparent rounded-DEFAULT shadow-sm font-label-sm text-label-sm text-on-primary bg-primary hover:bg-primary-container focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors">
+                <span id="verifyBtnText">Verify Email</span>
+                <span id="verifyBtnIcon" class="material-symbols-outlined text-[18px]">verified</span>
+            </button>
+
+            <!-- Back link -->
+            <div class="mt-md text-center">
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                    Wrong email?
+                    <a class="font-label-sm text-label-sm font-semibold text-primary hover:text-primary-fixed-dim transition-colors ml-1"
+                       href="signUp.html">Go back</a>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ── Right Column: Visual ── -->
+    <section class="hidden md:flex md:w-1/2 lg:w-[55%] relative bg-surface-container-low overflow-hidden items-center justify-center p-lg">
+        <!-- Background blobs -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
+            <div class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-primary-fixed blur-3xl mix-blend-multiply"></div>
+            <div class="absolute top-1/2 -left-20 w-72 h-72 rounded-full bg-secondary-fixed blur-3xl mix-blend-multiply"></div>
+            <div class="absolute bottom-0 right-1/3 w-64 h-64 rounded-full bg-tertiary-fixed blur-3xl mix-blend-multiply"></div>
+        </div>
+
+        <div class="relative z-10 w-full max-w-lg">
+
+            <!-- Progress steps -->
+            <div class="mb-xl">
+                <p class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider mb-md">Verification progress</p>
+                <div class="space-y-sm">
+                    <!-- Step 1: Done -->
+                    <div class="flex items-center gap-sm">
+                        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-on-primary text-sm" style="font-variation-settings: 'FILL' 1;">check</span>
+                        </div>
+                        <div>
+                            <p class="font-label-sm text-label-sm text-on-surface">Account created</p>
+                            <p class="font-label-xs text-label-xs text-on-surface-variant">Your details have been saved</p>
+                        </div>
+                    </div>
+                    <!-- Connector -->
+                    <div class="ml-4 w-px h-6 bg-primary/40"></div>
+                    <!-- Step 2: Active -->
+                    <div class="flex items-center gap-sm">
+                        <div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center flex-shrink-0 border-2 border-primary">
+                            <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">mark_email_read</span>
+                        </div>
+                        <div>
+                            <p class="font-label-sm text-label-sm text-primary font-semibold">Email verification</p>
+                            <p class="font-label-xs text-label-xs text-on-surface-variant">Enter the code from your inbox</p>
+                        </div>
+                    </div>
+                    <!-- Connector -->
+                    <div class="ml-4 w-px h-6 bg-outline-variant"></div>
+                    <!-- Step 3: Pending -->
+                    <div class="flex items-center gap-sm opacity-40">
+                        <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0 border-2 border-outline-variant">
+                            <span class="material-symbols-outlined text-outline text-sm">login</span>
+                        </div>
+                        <div>
+                            <p class="font-label-sm text-label-sm text-on-surface">Access granted</p>
+                            <p class="font-label-xs text-label-xs text-on-surface-variant">Sign in to your account</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security info card -->
+            <div class="bg-surface-container-lowest/80 backdrop-blur-sm rounded-xl border border-outline-variant/40 p-md shadow-lg">
+                <div class="flex items-center gap-xs mb-sm">
+                    <span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">shield</span>
+                    <span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-bold">Security Note</span>
+                </div>
+                <ul class="space-y-xs">
+                    <li class="flex items-start gap-xs font-body-md text-body-md text-on-surface-variant text-sm">
+                        <span class="material-symbols-outlined text-primary text-base mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        Code expires in 5 minutes
+                    </li>
+                    <li class="flex items-start gap-xs font-body-md text-body-md text-on-surface-variant text-sm">
+                        <span class="material-symbols-outlined text-primary text-base mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        Maximum 3 attempts allowed
+                    </li>
+                    <li class="flex items-start gap-xs font-body-md text-body-md text-on-surface-variant text-sm">
+                        <span class="material-symbols-outlined text-primary text-base mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        Never share your OTP with anyone
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<script>
+    // ── Read email saved by signUp.html after registration ──────────────────
+    const email = localStorage.getItem('pendingVerificationEmail') || '';
+    document.getElementById('emailDisplay').textContent = email || 'your email address';
+
+    // ── OTP Input Navigation ─────────────────────────────────────────────────
+    const inputs = document.querySelectorAll('.otp-input');
+
+    inputs.forEach((input, index) => {
+        input.addEventListener('input', (e) => {
+            const val = e.target.value.replace(/\D/g, '');
+            e.target.value = val;
+
+            if (val) {
+                input.classList.add('filled');
+                if (index < inputs.length - 1) inputs[index + 1].focus();
+            } else {
+                input.classList.remove('filled');
+            }
+            clearError();
+        });
+
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Backspace' && !input.value && index > 0) {
+                inputs[index - 1].focus();
+                inputs[index - 1].value = '';
+                inputs[index - 1].classList.remove('filled');
+            }
+            if (!/^\d$/.test(e.key) && !['Backspace','Tab','ArrowLeft','ArrowRight','Delete'].includes(e.key)) {
+                e.preventDefault();
+            }
+        });
+
+        // Paste support: paste "1234" fills all 4 boxes
+        input.addEventListener('paste', (e) => {
+            e.preventDefault();
+            const pasted = e.clipboardData.getData('text').replace(/\D/g, '').slice(0, 4);
+            [...pasted].forEach((char, i) => {
+                if (inputs[i]) {
+                    inputs[i].value = char;
+                    inputs[i].classList.add('filled');
+                }
+            });
+            const lastIdx = Math.min(pasted.length, 3);
+            inputs[lastIdx].focus();
+        });
+    });
+
+    // Focus first box on load
+    inputs[0].focus();
+
+    // ── Helpers ──────────────────────────────────────────────────────────────
+    function getOtpValue() {
+        return [...inputs].map(i => i.value).join('');
+    }
+
+    function showError(msg) {
+        document.getElementById('errorMsg').classList.remove('hidden');
+        document.getElementById('errorText').textContent = msg;
+        inputs.forEach(i => { i.classList.add('error'); i.classList.remove('filled'); });
+    }
+
+    function clearError() {
+        document.getElementById('errorMsg').classList.add('hidden');
+        inputs.forEach(i => i.classList.remove('error'));
+    }
+
+    // ── Toast Notification ───────────────────────────────────────────────────
+    function showToast(msg, type = 'success') {
+        const toast = document.getElementById('toast');
+        const icon  = document.getElementById('toastIcon');
+        const text  = document.getElementById('toastMsg');
+
+        text.textContent = msg;
+
+        if (type === 'success') {
+            toast.className = 'toast fixed top-6 right-6 z-50 flex items-center gap-3 px-md py-sm rounded-xl shadow-xl border max-w-sm bg-white border-primary/20';
+            icon.textContent = 'check_circle';
+            icon.className = 'material-symbols-outlined text-xl text-primary';
+            text.className = 'font-label-sm text-label-sm text-on-surface';
+        } else if (type === 'error') {
+            toast.className = 'toast fixed top-6 right-6 z-50 flex items-center gap-3 px-md py-sm rounded-xl shadow-xl border max-w-sm bg-error-container border-error/20';
+            icon.textContent = 'error';
+            icon.className = 'material-symbols-outlined text-xl text-error';
+            text.className = 'font-label-sm text-label-sm text-on-error-container';
+        } else {
+            toast.className = 'toast fixed top-6 right-6 z-50 flex items-center gap-3 px-md py-sm rounded-xl shadow-xl border max-w-sm bg-white border-outline-variant';
+            icon.textContent = 'info';
+            icon.className = 'material-symbols-outlined text-xl text-on-surface-variant';
+            text.className = 'font-label-sm text-label-sm text-on-surface';
+        }
+
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 3500);
+    }
+
+    // ── Countdown Timer (5 minutes) ──────────────────────────────────────────
+    const TOTAL_SECONDS  = 5 * 60;
+    let secondsLeft      = TOTAL_SECONDS;
+    const CIRCUMFERENCE  = 2 * Math.PI * 14; // r = 14
+    const timerText      = document.getElementById('timerText');
+    const timerRing      = document.getElementById('timerRing');
+    const resendBtn      = document.getElementById('resendBtn');
+
+    timerRing.style.strokeDasharray = CIRCUMFERENCE;
+
+    function formatTime(s) {
+        const m   = Math.floor(s / 60).toString().padStart(2, '0');
+        const sec = (s % 60).toString().padStart(2, '0');
+        return `${m}:${sec}`;
+    }
+
+    const timerInterval = setInterval(() => {
+        secondsLeft--;
+        timerText.textContent = formatTime(secondsLeft);
+
+        // Animate ring: full → empty
+        const progress = secondsLeft / TOTAL_SECONDS;
+        timerRing.style.strokeDashoffset = CIRCUMFERENCE * (1 - progress);
+
+        // Turn red in last 60 seconds
+        if (secondsLeft <= 60) timerRing.setAttribute('stroke', '#ba1a1a');
+
+        if (secondsLeft <= 0) {
+            clearInterval(timerInterval);
+            timerText.textContent = '00:00';
+            enableResend();
+            showToast('Code expired. Please request a new one.', 'error');
+        }
+    }, 1000);
+
+    function enableResend() {
+        resendBtn.disabled = false;
+        resendBtn.className = 'font-label-sm text-label-sm text-primary hover:text-primary-fixed-dim cursor-pointer underline underline-offset-2 transition-colors';
+    }
+
+    // ── Resend OTP ───────────────────────────────────────────────────────────
+    resendBtn.addEventListener('click', async () => {
+        if (!email) { showToast('Email not found. Please register again.', 'error'); return; }
+
+        resendBtn.disabled = true;
+        resendBtn.textContent = 'Sending…';
+
+        try {
+            const res  = await fetch('/api/auth/resend-otp', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email })
+            });
+            const data = await res.json();
+
+            if (res.ok) {
+                showToast('New code sent! Check your inbox.', 'success');
+                // Reset timer
+                secondsLeft = TOTAL_SECONDS;
+                timerRing.setAttribute('stroke', '#3525cd');
+                timerRing.style.strokeDashoffset = 0;
+                // Clear inputs
+                inputs.forEach(i => { i.value = ''; i.classList.remove('filled','error','success'); });
+                inputs[0].focus();
+                // Disable resend button again
+                resendBtn.textContent = 'Resend code';
+                resendBtn.disabled = true;
+                resendBtn.className = 'font-label-sm text-label-sm text-outline cursor-not-allowed transition-colors';
+            } else {
+                showToast(data.message || 'Failed to resend OTP.', 'error');
+                resendBtn.disabled = false;
+                resendBtn.textContent = 'Resend code';
+            }
+        } catch {
+            showToast('Network error. Please try again.', 'error');
+            resendBtn.disabled = false;
+            resendBtn.textContent = 'Resend code';
+        }
+    });
+
+    // ── Verify OTP ───────────────────────────────────────────────────────────
+    async function handleVerify() {
+        const otp = getOtpValue();
+
+        if (otp.length < 4) { showError('Please enter the complete 4-digit code.'); return; }
+        if (!email)          { showError('Email session expired. Please register again.'); return; }
+
+        // Loading state
+        const btn     = document.getElementById('verifyBtn');
+        const btnText = document.getElementById('verifyBtnText');
+        const btnIcon = document.getElementById('verifyBtnIcon');
+
+        btn.disabled = true;
+        btnText.textContent = 'Verifying…';
+        btnIcon.className   = 'material-symbols-outlined text-[18px] spinner';
+        btnIcon.textContent = 'sync';
+
+        try {
+            const res  = await fetch('/api/auth/verify-otp', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, otp })
+            });
+            const data = await res.json();
+
+            if (res.ok) {
+                // Success UI
+                inputs.forEach(i => { i.classList.add('success'); i.classList.remove('filled','error'); });
+                btnText.textContent = 'Verified!';
+                btnIcon.textContent = 'check_circle';
+                btnIcon.className   = 'material-symbols-outlined text-[18px]';
+                btn.style.background = '#1a7a1a';
+
+                showToast('Email verified! Redirecting to sign in…', 'success');
+                clearInterval(timerInterval);
+
+                localStorage.removeItem('pendingVerificationEmail');
+                setTimeout(() => { window.location.href = '/signIn.html'; }, 2000);
+
+            } else {
+                // Reset button
+                btn.disabled        = false;
+                btnText.textContent = 'Verify Email';
+                btnIcon.textContent = 'verified';
+                btnIcon.className   = 'material-symbols-outlined text-[18px]';
+                btn.style.background = '';
+
+                showError(data.message || 'Invalid OTP. Please try again.');
+                showToast(data.message || 'Invalid OTP.', 'error');
+
+                // Clear all boxes so user retypes
+                inputs.forEach(i => { i.value = ''; i.classList.remove('filled'); });
+                inputs[0].focus();
+            }
+        } catch {
+            btn.disabled        = false;
+            btnText.textContent = 'Verify Email';
+            btnIcon.textContent = 'verified';
+            btnIcon.className   = 'material-symbols-outlined text-[18px]';
+            btn.style.background = '';
+            showError('Network error. Please check your connection.');
+        }
+    }
+
+    // Press Enter to verify
+    document.addEventListener('keydown', (e) => { if (e.key === 'Enter') handleVerify(); });
+</script>
+</body>
+</html>
