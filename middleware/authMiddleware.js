@@ -1,6 +1,6 @@
 // lets protect all api endpoints behind jwt
 const jwt = require("jsonwebtoken");
-const User = require("../models/schema_user");
+const User = require("../models/userSchema");
 
 const protect = async (req, res, next) => {
     let token;
