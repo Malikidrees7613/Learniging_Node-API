@@ -7,7 +7,7 @@ const connectDB = require("./db/connectDB");
 
 const start = async () => {
     try {
-        await connectDB(process.env.MONGODB_URI);
+        await connectDB(process.env.MongoDB_URL);
         app.listen(port, () => {
             console.log(`Server is running on port ${port}`);
         });
