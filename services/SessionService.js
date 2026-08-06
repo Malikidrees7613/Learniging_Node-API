@@ -4,8 +4,8 @@ const SessionDuration = 60 * 60 * 1000;
 
 const CreateSession = async (UserId, { Device = "Unknown", IpAddress = "" }) => {
     try {
-        const expiresAt = new Date(Date.now() + SessionDuration)
-        return Session.create(UserId, Device, IpAddress, expiresAt);
+        const ExpiresAt = new Date(Date.now() + SessionDuration)
+        return Session.create({ UserId, Device, IpAddress, ExpiresAt });
     } catch (error) {
         throw error;
 

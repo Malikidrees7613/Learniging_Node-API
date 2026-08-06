@@ -470,24 +470,30 @@
         return `${m}:${sec}`;
     }
 
-    const timerInterval = setInterval(() => {
-        secondsLeft--;
-        timerText.textContent = formatTime(secondsLeft);
+    let timerInterval;
 
-        // Animate ring: full → empty
-        const progress = secondsLeft / TOTAL_SECONDS;
-        timerRing.style.strokeDashoffset = CIRCUMFERENCE * (1 - progress);
+    function startTimer() {
+        timerInterval = setInterval(() => {
+            secondsLeft--;
+            timerText.textContent = formatTime(secondsLeft);
 
-        // Turn red in last 60 seconds
-        if (secondsLeft <= 60) timerRing.setAttribute('stroke', '#ba1a1a');
+            // Animate ring: full → empty
+            const progress = secondsLeft / TOTAL_SECONDS;
+            timerRing.style.strokeDashoffset = CIRCUMFERENCE * (1 - progress);
 
-        if (secondsLeft <= 0) {
-            clearInterval(timerInterval);
-            timerText.textContent = '00:00';
-            enableResend();
-            showToast('Code expired. Please request a new one.', 'error');
-        }
-    }, 1000);
+            // Turn red in last 60 seconds
+            if (secondsLeft <= 60) timerRing.setAttribute('stroke', '#ba1a1a');
+
+            if (secondsLeft <= 0) {
+                clearInterval(timerInterval);
+                timerText.textContent = '00:00';
+                enableResend();
+                showToast('Code expired. Please request a new one.', 'error');
+            }
+        }, 1000);
+    }
+
+    startTimer();
 
     function enableResend() {
         resendBtn.disabled = false;
@@ -515,6 +521,7 @@
                 secondsLeft = TOTAL_SECONDS;
                 timerRing.setAttribute('stroke', '#3525cd');
                 timerRing.style.strokeDashoffset = 0;
+                startTimer();
                 // Clear inputs
                 inputs.forEach(i => { i.value = ''; i.classList.remove('filled','error','success'); });
                 inputs[0].focus();

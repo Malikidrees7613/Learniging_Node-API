@@ -13,8 +13,8 @@ const genrateOTP = () => {
     try {
         return Math.floor(1000 + Math.random() * 9000).toString();
     } catch (error) {
-        res.status(500).json({ message: "Error in genrating OTP" })
         console.log("Error in genrating OTP", error);
+        throw error;
     }
 }
 

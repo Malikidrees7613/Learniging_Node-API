@@ -1,6 +1,6 @@
 require("dotenv").config();
-const connect_db = require("./db/connect");
-const Product = require("./models/schema_products");
+const connect_db = require("./db/connectDB");
+const Product = require("./models/productsSchema");
 
 const product_data = require("./products.json");
 

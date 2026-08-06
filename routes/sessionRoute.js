@@ -4,7 +4,7 @@ const { getMySessions, deleteSession, logoutAllSessions } = require("../controll
 const { protect } = require("../middleware/authMiddleware");
 
 router.get("/", protect, getMySessions);
-router.delete("/:id", protect, deleteSession);
 router.delete("/logoutAll", protect, logoutAllSessions);
+router.delete("/:id", protect, deleteSession);
 
 module.exports = router;

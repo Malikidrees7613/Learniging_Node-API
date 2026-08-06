@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const { genrateOTP, sendOTPEmail } = require("../services/EmailService");
 const OTP = require("../models/otpVerification");
-const { revokeSession } = require("../services/SessionService");
+const SessionService = require("../services/SessionService");
 
 const register = async (req, res) => {
     try {
@@ -42,11 +42,11 @@ const verifyOTP = async (req, res) => {
         if (otpData.otp !== otp) {
             otpData.attempt += 1;
             await otpData.save();
+            if (otpData.attempt >= otpData.maxAttempt) {
+                res.status(400).json({ message: "Maximum OTP attempts reached" });
+                return;
+            }
             res.status(400).json({ message: "Invalid OTP" });
-            return;
-        }
-        if (otpData.attempt >= otpData.maxAttempt) {
-            res.status(400).json({ message: "Maximum OTP attempts reached" });
             return;
         }
         const user = await User.findOneAndUpdate({ email }, { isVerified: true }, { returnDocument: 'after' });
@@ -105,16 +105,19 @@ const login = async (req, res) => {
         const token = jwt.sign({ id: user._id, sessionId: session._id }, process.env.JWT_SECRET, { expiresIn: "1h" });
         res.status(200).json({ message: "User logged in successfully", token, sessionId: session._id });
     } catch (error) {
-        console.log(error)
+        console.log(error);
+        res.status(500).json({ message: "Internal server error" });
     }
-    const logout = async (req, res) => {
-        try {
-            await SessionService.revokeSession(req.user._id);
-            res.status(200).json({ message: "User logged out successfully" });
-        } catch (error) {
-            console.log(error);
-            res.status(500).json({ message: "Internal server error" });
-        }
+}
+
+const logout = async (req, res) => {
+    try {
+        // req.session is the current session doc set by protect middleware
+        await SessionService.revokeSession(req.session._id);
+        res.status(200).json({ message: "User logged out successfully" });
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: "Internal server error" });
     }
 }
 
