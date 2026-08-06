@@ -1,6 +1,8 @@
 // lets protect all api endpoints behind jwt
 const jwt = require("jsonwebtoken");
 const User = require("../models/userSchema");
+const { isSessionValid } = require("../services/SessionService");
+
 
 const protect = async (req, res, next) => {
     let token;
@@ -14,6 +16,11 @@ const protect = async (req, res, next) => {
     }
     try {
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        req.session = await isSessionValid(decoded.sessionId);
+        if (!req.session) {
+            res.status(401).json({ message: "Not authorized to access this resource" });
+            return;
+        }
         req.user = await User.findById(decoded.id).select("-password");
         if (!req.user) {
             res.status(401).json({ message: "Not authorized to access this resource" });
