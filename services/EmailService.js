@@ -1,13 +1,7 @@
-const nodemailer = require("nodemailer");
+const sgMail = require("@sendgrid/mail");
 
 
-const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS
-    }
-});
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const genrateOTP = () => {
     try {
@@ -19,13 +13,13 @@ const genrateOTP = () => {
 }
 
 const sendOTPEmail = async (email, otp) => {
-    const mailOptions = {
-        from: process.env.EMAIL_USER,
+    const msg = {
         to: email,
+        from: process.env.SENDGRID_FROM_EMAIL,
         subject: "Verify your email",
         html: `<p>Your OTP is ${otp}</p>`
     };
-    await transporter.sendMail(mailOptions);
+    await sgMail.send(msg);
 
 };
 
