@@ -3,6 +3,7 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const { genrateOTP, sendOTPEmail } = require("../services/EmailService");
 const OTP = require("../models/otpVerification");
+const { revokeSession } = require("../services/SessionService");
 
 const register = async (req, res) => {
     try {
@@ -100,11 +101,21 @@ const login = async (req, res) => {
             res.status(400).json({ message: "User not verified" });
             return;
         }
-        const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: "1h" });
-        res.status(200).json({ message: "User logged in successfully", token });
+        const session = await SessionService.CreateSession(user._id, { Device: req.headers["user-agent"] || "Unknown", IpAddress: req.ip || req.socket.remoteAddress });
+        const token = jwt.sign({ id: user._id, sessionId: session._id }, process.env.JWT_SECRET, { expiresIn: "1h" });
+        res.status(200).json({ message: "User logged in successfully", token, sessionId: session._id });
     } catch (error) {
         console.log(error)
     }
+    const logout = async (req, res) => {
+        try {
+            await SessionService.revokeSession(req.user._id);
+            res.status(200).json({ message: "User logged out successfully" });
+        } catch (error) {
+            console.log(error);
+            res.status(500).json({ message: "Internal server error" });
+        }
+    }
 }
 
-module.exports = { register, verifyOTP, resendOTP, login };
+module.exports = { register, verifyOTP, resendOTP, login, logout };
