@@ -9,8 +9,7 @@ const session_route = require("./routes/sessionRoute");
 const port = 3000;
 
 app.get("/", (req, res) => {
-    // res.send(200);
-    res.send("Server is up and running!");
+    res.redirect("/signin.html");
 })
 app.use(express.json());
 app.use("/api/products", product_route);
